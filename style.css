@@ -205,9 +205,32 @@ p {
     box-shadow:0 10px 25px rgba(99,102,241,.4);
 
     animation:resultShow .8s ease;
+    display: none;
 
 }
+#resumeQuize{
+       margin-top:25px;
 
+    padding:20px;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(99,102,241,.4);
+
+    animation:resultShow .8s ease;
+    display: none;
+    cursor: pointer;
+}
 
 /* Animations */
 

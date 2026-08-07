@@ -51,7 +51,7 @@ const optione = document.querySelectorAll(".option");
 const nextbtn = document.getElementById("nextBtn");
 const score1 = document.getElementById("score");
 const result = document.getElementById("result");
-
+const resumeQuize = document.getElementById("resumeQuize")
 
 //=================================================== SHOW QUESTIONS ==============================================//
 
@@ -62,12 +62,12 @@ function showQuestion() {
 }
 
 //=================================================== SHOW OPTIONS ==============================================//
-function showOptions(data){
+    function showOptions(data){
 
-    for(let i = 0; i<data.options.length; i++){
-    optione[i].innerText = data.options[i]
-}
-}
+        for(let i = 0; i<data.options.length; i++){
+        optione[i].innerText = data.options[i]
+    }
+    }
 showQuestion();
 
 
@@ -112,5 +112,32 @@ function showResult(){
 
     });
     nextbtn.style.display  = "none"
+    result.style.display = "block"
+    resumeQuize.style.display = "block"
     result.innerText = `Your Score is ${score} / ${questions.length}`;
 }
+
+
+//=============================================== Resume QUIZE =========================================================//
+
+
+resumeQuize.addEventListener("click", function () {
+
+    currentQuestion = 0;
+    score = 0;
+    answer = false;
+
+    score1.innerText = score;
+    question.style.display = "block";
+
+    optione.forEach(function(btn){
+        btn.style.display = "block";
+    });
+
+    nextBtn.style.display = "block";
+    result.style.display = "none";
+    resumeQuize.style.display = "none";
+
+    showQuestion();
+
+});
