@@ -52,6 +52,8 @@ const nextbtn = document.getElementById("nextBtn");
 const score1 = document.getElementById("score");
 const result = document.getElementById("result");
 const resumeQuize = document.getElementById("resumeQuize")
+let progress = document.getElementById("progress");
+
 
 //=================================================== SHOW QUESTIONS ==============================================//
 
@@ -141,3 +143,10 @@ resumeQuize.addEventListener("click", function () {
     showQuestion();
 
 });
+
+//============================================= PROGRESS BAR =========================================================//
+
+function updateProgress() {
+    let percentage = ((currentQuestion + 1) / questions.length) * 100;
+    progress.style.width = percentage + "%";
+}
