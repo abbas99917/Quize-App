@@ -98,6 +98,7 @@ nextbtn.addEventListener("click",function(){
         currentQuestion++
         answer = false;
         showQuestion()
+        updateProgress()
     }
     else{
         showResult()
